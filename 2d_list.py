@@ -13,18 +13,15 @@ import random
 def average_number(average):
     # this function get the average of numbers in list
 
-    avg = average[0]
-
-    # adder
+    average[0]
+    sum = 0
     for counter in average:
+        avg = average[0]
         avg = avg + counter
-    # sum
-    total = 0
-    for counter_loop in range(0, len(avg)):
-        total = total + avg[counter_loop]
-    # process
-    process = total / len(avg)
-    # return
+    # sum average get process
+    for counter_loop in avg:
+        sum += counter_loop
+        process = sum / len(avg)
     return process
 
 
