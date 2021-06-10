@@ -10,19 +10,21 @@
 import random
 
 
-def average_number(average):
+def average_number(two_d_list):
     # this function get the average of numbers in list
 
-    average[0]
+    calculated_average = 0
     sum = 0
-    for counter in average:
-        avg = average[0]
-        avg = avg + counter
-    # sum average get process
-    for counter_loop in avg:
-        sum += counter_loop
-        process = sum / len(avg)
-    return process
+    counter = 0
+
+    for one_d_list in two_d_list:
+        for a_single_number in one_d_list:
+            sum = sum + a_single_number
+            counter = counter + 1
+
+    calculated_average = sum / counter
+
+    return calculated_average
 
 
 def main():
@@ -46,13 +48,12 @@ def main():
         a_2d_list.append(temp_column)
         print("")
     # output
+    average = average_number(a_2d_list)
     print(
         "\n\nThe average of all the numbers is: {0}"
-        .format(average_number(a_2d_list)))
+        .format(average))
     print("\nDone.")
 
 
 if __name__ == "__main__":
     main()
-
-    
